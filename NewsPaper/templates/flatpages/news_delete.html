@@ -1,0 +1,14 @@
+{% extends 'default.html' %}
+
+{% block title %}
+Удалить новость
+{% endblock title %}
+
+{% block content %}
+   <h1>Delete News</h1>
+   <form method="post">
+       {% csrf_token %}
+       <button type="submit">Удалить</button>
+   </form>
+   <a href="{% url 'post-detail' post.pk %}">Отмена</a>
+{% endblock content %}
